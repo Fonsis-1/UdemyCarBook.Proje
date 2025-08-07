@@ -13,22 +13,22 @@ using UdemyCarBook.Domain.Entities;
 
 namespace UdemyCarBook.Application.Features.Mediator.Handlers.FeatureHandlers
 {
-    public class GetFeatureByIdQueryHandler : IRequestHandler<GetFeatureByIdQuery, GetFeatureByIdQueryResult>
-    {
-        private readonly IRepository<Feature> _repository;
-        public GetFeatureByIdQueryHandler(IRepository<Feature> repository)
-        {
-            _repository = repository;
-        }
+	public class GetFeatureByIdQueryHandler : IRequestHandler<GetFeatureByIdQuery, GetFeatureByIdQueryResult>
+	{
+		private readonly IRepository<Feature> _repository;
+		public GetFeatureByIdQueryHandler(IRepository<Feature> repository)
+		{
+			_repository = repository;
+		}
 
-        public async Task<GetFeatureByIdQueryResult> Handle(GetFeatureByIdQuery request, CancellationToken cancellationToken)
-        {
-            var values = await _repository.GetByIdAsync(request.Id);
-            return new GetFeatureByIdQueryResult
-            {
-                FeatureID = values.FeatureID,
-                Name = values.Name
-            };
-        }
-    }
+		public async Task<GetFeatureByIdQueryResult> Handle(GetFeatureByIdQuery request, CancellationToken cancellationToken)
+		{
+			var values = await _repository.GetByIdAsync(request.Id);
+			return new GetFeatureByIdQueryResult
+			{
+				FeatureID = values.FeatureID,
+				Name = values.Name
+			};
+		}
+	}
 }

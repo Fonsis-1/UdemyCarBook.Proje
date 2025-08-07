@@ -17,5 +17,7 @@ namespace UdemyCarBook.Application.Interfaces
         Task RemoveAsync(T entity);
         Task<T?> GetByFilterAsync(Expression<Func<T, bool>> filter);
         Task<Service> GetByIdAsync(object serviceID);
+        Task RemoveAsync(Task<Testimonial> value);
+        Task UpdateAsync(Task<Testimonial> values);
     }
 }
