@@ -10,7 +10,6 @@ namespace UdemyCarBook.Domain.Entities
 	{
 		public int CategoryID { get; set; }
 		public string Name { get; set; }
-
-		/*public List<Blog> Blogs { get; set; }*/
+		public List<Blog> Blogs { get; set; }
 	}
 }
