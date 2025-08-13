@@ -21,7 +21,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.BlogHandlers
         {
             var values = await _repository.GetByIdAsync(request.BlogID);
             values.AuthorID = request.AuthorID;
-            values.CreatedDate = request.CreatedDate;
+            values.CreatedDate= request.CreatedDate;
             values.CategoryID = request.CategoryID;
             values.CoverImageUrl = request.CoverImageUrl;
             values.Title = request.Title;

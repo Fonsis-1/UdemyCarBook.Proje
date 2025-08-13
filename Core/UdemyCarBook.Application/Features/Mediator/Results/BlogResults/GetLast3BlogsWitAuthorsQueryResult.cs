@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Application.Features.Mediator.Results.BlogResults
 {
-    public class GetLast3BlogsWithAuthorsQueryResult
+    public class GetLast3BlogsWitAuthorsQueryResult
     {
         public int BlogID { get; set; }
         public string Title { get; set; }

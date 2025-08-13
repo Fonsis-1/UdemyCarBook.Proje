@@ -8,15 +8,16 @@ namespace UdemyCarBook.Dto.BlogDtos
 {
     public class ResultAllBlogsWithAuthorDto
     {
-        public int blogID { get; set; }
-        public string title { get; set; }
-        public string authorName { get; set; }
-        public object categoryName { get; set; }
-        public int authorID { get; set; }
-        public string coverImageUrl { get; set; }
-        public DateTime createdDate { get; set; }
-        public int categoryID { get; set; }
-       
+        public int BlogID { get; set; }
+        public string Title { get; set; }
+        public string AuthorName { get; set; }
+        public object CategoryName { get; set; }
+        public int AuthorID { get; set; }
+        public string CoverImageUrl { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public int CategoryID { get; set; }
+        public string Description { get; set; }
+     
     }
 
 }

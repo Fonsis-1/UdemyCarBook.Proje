@@ -21,10 +21,10 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.BlogHandlers
         {
             await _repository.CreateAsync(new Blog
             {
-                AuthorID = request.AuthorID,
-                CategoryID = request.CategoryID,
-                CoverImageUrl = request.CoverImageUrl,
-                CreatedDate = request.CreatedDate,
+                AuthorID= request.AuthorID,
+                CategoryID= request.CategoryID,
+                CoverImageUrl= request.CoverImageUrl,
+                CreatedDate= request.CreatedDate,
                 Title = request.Title
             });
         }
