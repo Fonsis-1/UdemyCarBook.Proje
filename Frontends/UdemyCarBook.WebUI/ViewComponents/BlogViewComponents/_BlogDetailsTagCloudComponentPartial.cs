@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using UdemyCarBook.Dto.BlogDtos;
 using UdemyCarBook.Dto.TagCloudDtos;
 
 namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
 {
-    public class _BlogDetailsTagCloudComponentPartial : ViewComponent
+    public class _BlogDetailsTagCloudComponentPartial:ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
         public _BlogDetailsTagCloudComponentPartial(IHttpClientFactory httpClientFactory)
@@ -26,7 +27,3 @@ namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
         }
     }
 }
-
-
-    
-

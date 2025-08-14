@@ -5,7 +5,7 @@ using UdemyCarBook.Dto.TagCloudDtos;
 
 namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
 {
-    public class _BlogDetailCloudTagByBlogComponentPartial : ViewComponent
+    public class _BlogDetailCloudTagByBlogComponentPartial:ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
         public _BlogDetailCloudTagByBlogComponentPartial(IHttpClientFactory httpClientFactory)
