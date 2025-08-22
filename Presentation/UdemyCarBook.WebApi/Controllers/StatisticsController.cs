@@ -23,7 +23,7 @@ namespace UdemyCarBook.WebApi.Controllers
             return Ok(values);
         }
 
-       /* [HttpGet("GetLocationCount")]
+        [HttpGet("GetLocationCount")]
         public async Task<IActionResult> GetLocationCount()
         {
             var values = await _mediator.Send(new GetLocationCountQuery());
@@ -126,6 +126,6 @@ namespace UdemyCarBook.WebApi.Controllers
         {
             var values = await _mediator.Send(new GetCarBrandAndModelByRentPriceDailyMinQuery());
             return Ok(values);
-        }*/
+        }
     }
 }
