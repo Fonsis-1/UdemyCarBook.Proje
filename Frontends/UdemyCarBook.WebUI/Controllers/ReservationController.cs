@@ -2,24 +2,23 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using System.Text;
-/*using UdemyCarBook.Dto.LocationDtos;
+using UdemyCarBook.Dto.LocationDtos;
 using UdemyCarBook.Dto.ReservationDtos;
-using UdemyCarBook.Dto.TestimonialDtos;*/
 
 namespace UdemyCarBook.WebUI.Controllers
 {
     public class ReservationController : Controller
     {
-       /* private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IHttpClientFactory _httpClientFactory;
         public ReservationController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
-        }*/
+        }
 
-       /* [HttpGet]*/
+        [HttpGet]
         public async Task<IActionResult> Index(int id)
         {
-        /*    ViewBag.v1 = "Araç Kiralama";
+            ViewBag.v1 = "Araç Kiralama";
             ViewBag.v2 = "Araç Rezervasyon Formu";
             ViewBag.v3 = id;
 
@@ -50,7 +49,7 @@ namespace UdemyCarBook.WebUI.Controllers
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "Default");
-            }*/
+            }
             return View();
         }
     }

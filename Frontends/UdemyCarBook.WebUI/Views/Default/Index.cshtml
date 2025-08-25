@@ -4,6 +4,9 @@
     Layout = null;
 }
 
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 @await Component.InvokeAsync("_HeadUILayoutComponentPartial")
@@ -24,7 +27,7 @@
                                 <h2>Şimdi Aracınızı Kiralayın</h2>
                                 <div class="form-group">
                                     <label for="" class="label">Alınacak Lokasyon</label>
-                                    @Html.DropDownListFor(x=>x.LocationID,(List<SelectListItem>)ViewBag.v,new {@class="form-control",name="locationID"})
+                                    @Html.DropDownListFor(x => x.LocationID, (List<SelectListItem>)ViewBag.v, new { @class = "form-control", name = "LocationID" })
                                 </div>
 
                                 <div class="d-flex">
