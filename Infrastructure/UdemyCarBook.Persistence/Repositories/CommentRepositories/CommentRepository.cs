@@ -41,7 +41,7 @@ namespace UdemyCarBook.Persistence.Repositories.CommentRepositories
 
         public List<Comment> GetCommentsByBlogId(int id)
         {
-            return _context.Set<Comment>().Where(x=>x.BlogID == id).ToList();
+            return _context.Set<Comment>().Where(x => x.BlogID == id).ToList();
         }
 
         public void Remove(Comment entity)
@@ -49,13 +49,17 @@ namespace UdemyCarBook.Persistence.Repositories.CommentRepositories
             var value = _context.Comments.Find(entity.CommentID);
             _context.Comments.Remove(value);
             _context.SaveChanges();
-            
         }
 
         public void Update(Comment entity)
         {
             _context.Comments.Update(entity);
             _context.SaveChanges();
+        }
+
+        public int GetCountCommentByBlog(int id)
+        {
+            return _context.Comments.Where(x => x.BlogID == id).Count();
         }
     }
 }

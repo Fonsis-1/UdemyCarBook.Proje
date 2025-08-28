@@ -34,17 +34,15 @@ namespace UdemyCarBook.WebUI.Controllers
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
             var values = JsonConvert.DeserializeObject<List<ResultBrandDto>>(jsonData);
             List<SelectListItem> brandValues = (from x in values
-                select new SelectListItem
-                {
-
-                  Text = x.Name,
-                  Value = x.BrandID.ToString()
-
-                  }).ToList();
-
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.Name,
+                                                    Value = x.BrandID.ToString()
+                                                }).ToList();
             ViewBag.BrandValues = brandValues;
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> CreateCar(CreateCarDto createCarDto)
         {
@@ -58,6 +56,7 @@ namespace UdemyCarBook.WebUI.Controllers
             }
             return View();
         }
+
         public async Task<IActionResult> RemoveCar(int id)
         {
             var client = _httpClientFactory.CreateClient();
@@ -68,6 +67,7 @@ namespace UdemyCarBook.WebUI.Controllers
             }
             return View();
         }
+
         [HttpGet]
         public async Task<IActionResult> UpdateCar(int id)
         {
@@ -94,6 +94,7 @@ namespace UdemyCarBook.WebUI.Controllers
             }
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> UpdateCar(UpdateCarDto updateCarDto)
         {
