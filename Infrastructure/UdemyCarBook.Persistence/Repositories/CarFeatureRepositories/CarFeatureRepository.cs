@@ -18,7 +18,7 @@ namespace UdemyCarBook.Persistence.Repositories.CarFeatureRepositories
             _context = context;
         }
 
-      /*  public void ChangeCarFeatureAvailableToFalse(int id)
+        public void ChangeCarFeatureAvailableToFalse(int id)
         {
             var values = _context.CarFeatures.Where(x => x.CarFeatureID == id).FirstOrDefault();
             values.Available = false;
@@ -36,7 +36,7 @@ namespace UdemyCarBook.Persistence.Repositories.CarFeatureRepositories
         {
             _context.CarFeatures.Add(carFeature);
             _context.SaveChanges();
-        }*/
+        }
 
         public List<CarFeature> GetCarFeaturesByCarID(int carID)
         {

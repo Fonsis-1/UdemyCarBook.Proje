@@ -17,7 +17,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         }
 
         [Route("Index/{id}")]
-       /* [HttpGet]*/
+        [HttpGet]
         public async Task<IActionResult> Index(int id)
         {
             var client = _httpClientFactory.CreateClient();
@@ -31,7 +31,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
             return View();
         }
 
-       /* [HttpPost]
+        [HttpPost]
         [Route("Index/{id}")]
         public async Task<IActionResult> Index(List<ResultCarFeatureByCarIdDto> resultCarFeatureByCarIdDto)
         {
@@ -66,6 +66,6 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
                 return View(values);
             }
             return View();
-        }*/
+        }
     }
 }
