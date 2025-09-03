@@ -1,4 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace UdemyCarBook.WebUI.ViewComponents.DashboardComponents
 {
@@ -10,4 +10,3 @@ namespace UdemyCarBook.WebUI.ViewComponents.DashboardComponents
         }
     }
 }
-*/
