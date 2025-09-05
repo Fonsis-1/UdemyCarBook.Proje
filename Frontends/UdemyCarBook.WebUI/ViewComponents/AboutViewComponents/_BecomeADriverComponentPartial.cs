@@ -8,6 +8,5 @@ namespace UdemyCarBook.WebUI.ViewComponents.AboutViewComponents
         {
             return View();
         }
-
     }
 }

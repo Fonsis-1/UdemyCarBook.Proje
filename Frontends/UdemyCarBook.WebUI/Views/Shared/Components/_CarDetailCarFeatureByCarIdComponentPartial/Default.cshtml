@@ -1,11 +1,9 @@
 ﻿@model List<ResultCarFeatureByCarIdDto>
-
 <div class="tab-pane fade show active" id="pills-description" role="tabpanel" aria-labelledby="pills-description-tab">
 	<div class="row">
-		
 		<div class="col-md-4">
 			<ul class="features">
-				@foreach(var item in Model)
+				@foreach (var item in Model)
 				{
 					if (item.Available == true)
 					{
@@ -18,6 +16,5 @@
 				}
 			</ul>
 		</div>
-		
 	</div>
 </div>

@@ -8,6 +8,6 @@ namespace UdemyCarBook.Dto.BrandDtos
 {
     public class CreateBrandDto
     {
-        public string name { get; set; }
+        public string Name { get; set; }
     }
 }

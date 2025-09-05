@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Application.Features.CQRS.Queries.CarQueries
 {
-	public class GetCarByIdQuery
-	{
-		public int Id { get; set; }
+    public class GetCarByIdQuery
+    {
+        public int Id { get; set; }
 
-		public GetCarByIdQuery(int id)
-		{
-			Id = id;
-		}
-	}
+        public GetCarByIdQuery(int id)
+        {
+            Id = id;
+        }
+    }
 }

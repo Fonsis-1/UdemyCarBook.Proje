@@ -6,7 +6,6 @@ namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
 {
     public class _BlogDetailsAuthorAboutComponentPartial : ViewComponent
     {
-
         private readonly IHttpClientFactory _httpClientFactory;
         public _BlogDetailsAuthorAboutComponentPartial(IHttpClientFactory httpClientFactory)
         {

@@ -4,7 +4,7 @@ using UdemyCarBook.Dto.CategoryDtos;
 
 namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
 {
-    public class _BlogDetailsCategoryComponentPartial:ViewComponent
+    public class _BlogDetailsCategoryComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
         public _BlogDetailsCategoryComponentPartial(IHttpClientFactory httpClientFactory)

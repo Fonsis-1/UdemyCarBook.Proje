@@ -18,8 +18,8 @@ namespace UdemyCarBook.WebUI.ViewComponents.AboutViewComponents
             var responseMessage = await client.GetAsync("https://localhost:7173/api/Abouts");
             if (responseMessage.IsSuccessStatusCode)
             {
-                var jsonData=await responseMessage.Content.ReadAsStringAsync();
-                var values=JsonConvert.DeserializeObject<List<ResultAboutDto>>(jsonData);
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultAboutDto>>(jsonData);
                 return View(values);
             }
             return View();

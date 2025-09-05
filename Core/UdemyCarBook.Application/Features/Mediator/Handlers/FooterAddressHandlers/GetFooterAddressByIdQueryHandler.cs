@@ -20,7 +20,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.FooterAddressHandl
         }
         public async Task<GetFooterAddressByIdQueryResult> Handle(GetFooterAddressByIdQuery request, CancellationToken cancellationToken)
         {
-            var value=await _repository.GetByIdAsync(request.Id);
+            var value = await _repository.GetByIdAsync(request.Id);
             return new GetFooterAddressByIdQueryResult
             {
                 Address = value.Address,

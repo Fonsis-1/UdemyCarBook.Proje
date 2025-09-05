@@ -20,7 +20,5 @@ namespace UdemyCarBook.Application.Features.Mediator.Commands.ReservationCommand
         public int Age { get; set; }
         public int DriverLicenseYear { get; set; }
         public string Description { get; set; }
-     
-
     }
 }

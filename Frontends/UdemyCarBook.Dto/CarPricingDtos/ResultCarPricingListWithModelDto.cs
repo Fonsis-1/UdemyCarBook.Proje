@@ -15,5 +15,4 @@ namespace UdemyCarBook.Dto.CarPricingDtos
         public string CoverImageUrl { get; set; }
         public string Brand { get; set; }
     }
-
 }

@@ -18,7 +18,6 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.StatisticsHandlers
         {
             _repository = repository;
         }
-
         public async Task<GetAuthorCountQueryResult> Handle(GetAuthorCountQuery request, CancellationToken cancellationToken)
         {
             var value = _repository.GetAuthorCount();

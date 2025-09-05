@@ -14,7 +14,6 @@
 
 					@await Component.InvokeAsync("_CarDetailTabPaneComponentPartial")
 
-
 					<div class="tab-content" id="pills-tabContent">
 
 						@await Component.InvokeAsync("_CarDetailCarFeatureByCarIdComponentPartial", new { id = ViewBag.carid })
@@ -22,7 +21,6 @@
 						@await Component.InvokeAsync("_CarDetailCarDescriptionByCarIdComponentPartial", new { id = ViewBag.carid })
 
 						@await Component.InvokeAsync("_CarDetailCommentsByCarIdComponentPartial", new { id = ViewBag.carid })
-
 
 					</div>
 				</div>

@@ -4,7 +4,7 @@ using UdemyCarBook.Dto.BlogDtos;
 
 namespace UdemyCarBook.WebUI.ViewComponents.BlogViewComponents
 {
-    public class _BlogDetailsRecentBlogsComponentPartial:ViewComponent
+    public class _BlogDetailsRecentBlogsComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
         public _BlogDetailsRecentBlogsComponentPartial(IHttpClientFactory httpClientFactory)

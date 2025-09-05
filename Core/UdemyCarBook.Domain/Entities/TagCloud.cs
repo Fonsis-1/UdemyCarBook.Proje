@@ -12,6 +12,5 @@ namespace UdemyCarBook.Domain.Entities
         public string Title { get; set; }
         public int BlogID { get; set; }
         public Blog Blog { get; set; }
-
     }
 }

@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using UdemyCarBook.Application.Interfaces.AppUserInterfaces;
 using UdemyCarBook.Domain.Entities;
 using UdemyCarBook.Persistence.Context;
-
 namespace UdemyCarBook.Persistence.Repositories.AppUserRepositories
 {
     public class AppUserRepository : IAppUserRepository

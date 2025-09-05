@@ -17,7 +17,7 @@ namespace UdemyCarBook.WebUI.ViewComponents.TestimonialViewComponents
             var responseMessage = await client.GetAsync("https://localhost:7173/api/Testimonials");
             if (responseMessage.IsSuccessStatusCode)
             {
-                var jsonData= await responseMessage.Content.ReadAsStringAsync();
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<ResultTestimonialDto>>(jsonData);
                 return View(values);
             }

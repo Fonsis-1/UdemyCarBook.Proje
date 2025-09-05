@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using UdemyCarBook.Dto.CommentDtos;
-using UdemyCarBook.Dto.TagCloudDtos;
 
 namespace UdemyCarBook.WebUI.ViewComponents.CommentViewComponents
 {

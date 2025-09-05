@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 using UdemyCarBook.Application.Features.Mediator.Queries.CarPricingQueries;
 using UdemyCarBook.Application.Features.Mediator.Results.CarPricingResults;
 using UdemyCarBook.Application.Interfaces.CarPricingInterfaces;
-using UdemyCarBook.Domain.Entities;
 
 namespace UdemyCarBook.Application.Features.Mediator.Handlers.CarPricingHandlers
 {

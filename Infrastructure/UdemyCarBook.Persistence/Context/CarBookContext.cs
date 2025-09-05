@@ -8,13 +8,12 @@ using UdemyCarBook.Domain.Entities;
 
 namespace UdemyCarBook.Persistence.Context
 {
-	public class CarBookContext : DbContext
-	{
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-			optionsBuilder.UseSqlServer("Server=MSI\\SQLEXPRESS; initial Catalog=CarBookDB; integrated Security=true;TrustServerCertificate=True;");
+    public class CarBookContext : DbContext
+    {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=MSI\\SQLEXPRESS; initial Catalog=CarBookDB; integrated Security=true;TrustServerCertificate=True;");
 		}
-
 		public DbSet<About> Abouts { get; set; }
 		public DbSet<Banner> Banners { get; set; }
 		public DbSet<Brand> Brands { get; set; }
@@ -40,19 +39,19 @@ namespace UdemyCarBook.Persistence.Context
         public DbSet<Review> Reviews { get; set; }
 		public DbSet<AppRole> AppRoles { get; set; }
 		public DbSet<AppUser> AppUsers { get; set; }
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
-		{
-			modelBuilder.Entity<Reservation>()
-				.HasOne(x => x.PickUpLocation)
-				.WithMany(y => y.PickUpReservation)
-				.HasForeignKey(z => z.PickUpLocationID)
-				.OnDelete(DeleteBehavior.ClientSetNull);
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Reservation>()
+                .HasOne(x => x.PickUpLocation)
+                .WithMany(y => y.PickUpReservation)
+                .HasForeignKey(z => z.PickUpLocationID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
 
-			modelBuilder.Entity<Reservation>()
-				.HasOne(x => x.DropOffLocation)
-				.WithMany(y => y.DropOffReservation)
-				.HasForeignKey(z => z.DropOffLocationID)
-				.OnDelete(DeleteBehavior.ClientSetNull);
-		}
+            modelBuilder.Entity<Reservation>()
+                .HasOne(x => x.DropOffLocation)
+                .WithMany(y => y.DropOffReservation)
+                .HasForeignKey(z => z.DropOffLocationID)
+                .OnDelete(DeleteBehavior.ClientSetNull);
+        }
     }
 }

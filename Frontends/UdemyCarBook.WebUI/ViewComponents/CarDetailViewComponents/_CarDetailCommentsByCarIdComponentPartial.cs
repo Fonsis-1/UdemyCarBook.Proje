@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using UdemyCarBook.Dto.CarFeatureDtos;
 using UdemyCarBook.Dto.ReviewDtos;
 
 namespace UdemyCarBook.WebUI.ViewComponents.CarDetailViewComponents
 {
-	public class _CarDetailCommentsByCarIdComponentPartial:ViewComponent
-	{
+    public class _CarDetailCommentsByCarIdComponentPartial : ViewComponent
+    {
         private readonly IHttpClientFactory _httpClientFactory;
         public _CarDetailCommentsByCarIdComponentPartial(IHttpClientFactory httpClientFactory)
         {

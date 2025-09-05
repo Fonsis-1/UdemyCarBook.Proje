@@ -5,9 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UdemyCarBook.Application.Features.Mediator.Queries.CarPricingQueries;
-using UdemyCarBook.Application.Features.Mediator.Results.BlogResults;
 using UdemyCarBook.Application.Features.Mediator.Results.CarPricingResults;
-using UdemyCarBook.Application.Features.Mediator.Results.LocationResults;
 using UdemyCarBook.Application.Interfaces.CarPricingInterfaces;
 
 namespace UdemyCarBook.Application.Features.Mediator.Handlers.CarPricingHandlers
@@ -30,8 +28,6 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.CarPricingHandlers
                 CoverImageUrl = x.Car.CoverImageUrl,
                 Model = x.Car.Model,
                 CarId = x.CarID
-
-
             }).ToList();
         }
     }

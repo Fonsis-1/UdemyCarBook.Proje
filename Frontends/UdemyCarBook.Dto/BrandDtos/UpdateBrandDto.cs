@@ -8,7 +8,7 @@ namespace UdemyCarBook.Dto.BrandDtos
 {
     public class UpdateBrandDto
     {
-        public int brandID { get; set; }
-        public string name { get; set; }
+        public int BrandID { get; set; }
+        public string Name { get; set; }
     }
 }

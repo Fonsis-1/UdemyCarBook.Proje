@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Application.Features.CQRS.Queries.BrandQueries
 {
-	public class GetBrandByIdQuery
-	{
-		public int Id { get; set; }
+    public class GetBrandByIdQuery
+    {
+        public int Id { get; set; }
 
-		public GetBrandByIdQuery(int id)
-		{
-			Id = id;
-		}
-	}
+        public GetBrandByIdQuery(int id)
+        {
+            Id = id;
+        }
+    }
 }

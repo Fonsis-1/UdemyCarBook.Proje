@@ -26,7 +26,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.ReviewHandlers
                 Comment = request.Comment,
                 CustomerName = request.CustomerName,
                 RaytingValue = request.RaytingValue,
-                ReviewDate=DateTime.Parse( DateTime.Now.ToShortDateString())         
+                ReviewDate = DateTime.Parse(DateTime.Now.ToShortDateString())
             });
         }
     }

@@ -18,7 +18,6 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.TestimonialHandler
         {
             _repository = repository;
         }
-
         public async Task<GetTestimonialByIdQueryResult> Handle(GetTestimonialByIdQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetByIdAsync(request.Id);

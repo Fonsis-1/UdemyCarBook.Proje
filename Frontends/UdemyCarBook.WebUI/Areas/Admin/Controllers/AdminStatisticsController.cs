@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using UdemyCarBook.Dto.AuthorDtos;
 using UdemyCarBook.Dto.StatisticsDtos;
 
 namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
@@ -9,7 +8,7 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
     [Route("Admin/AdminStatistics")]
     public class AdminStatisticsController : Controller
     {
-       private readonly IHttpClientFactory _httpClientFactory;
+        private readonly IHttpClientFactory _httpClientFactory;
         public AdminStatisticsController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
@@ -217,4 +216,3 @@ namespace UdemyCarBook.WebUI.Areas.Admin.Controllers
         }
     }
 }
-//10 11

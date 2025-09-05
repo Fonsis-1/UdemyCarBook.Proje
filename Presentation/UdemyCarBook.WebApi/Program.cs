@@ -36,10 +36,10 @@ using UdemyCarBook.Persistence.Repositories.RentACarRepositories;
 using UdemyCarBook.Persistence.Repositories.ReviewRepositories;
 using UdemyCarBook.Persistence.Repositories.StatisticsRepositories;
 using UdemyCarBook.Persistence.Repositories.TagCloudRepositories;
-/*using UdemyCarBook.WebApi.Hubs;*/
+using UdemyCarBook.WebApi.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
-/*builder.Services.AddHttpClient();
+builder.Services.AddHttpClient();
 
 builder.Services.AddCors(opt =>
 {
@@ -51,7 +51,7 @@ builder.Services.AddCors(opt =>
         .AllowCredentials();
     });
 });
-builder.Services.AddSignalR();*/
+builder.Services.AddSignalR();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(opt =>
 {
@@ -147,6 +147,6 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
-/*app.MapHub<CarHub>("/carhub");*/
+app.MapHub<CarHub>("/carhub");
 
 app.Run();

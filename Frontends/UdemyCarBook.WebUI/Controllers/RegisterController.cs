@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
-using UdemyCarBook.Dto.BrandDtos;
 using UdemyCarBook.Dto.RegisterDtos;
 
 namespace UdemyCarBook.WebUI.Controllers
@@ -26,10 +25,10 @@ namespace UdemyCarBook.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createRegisterDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync("https://localhost:7060/api/Registers", stringContent);
+            var responseMessage = await client.PostAsync("https://localhost:7173/api/Registers", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index","Login");
+                return RedirectToAction("Index", "Login");
             }
             return View();
         }

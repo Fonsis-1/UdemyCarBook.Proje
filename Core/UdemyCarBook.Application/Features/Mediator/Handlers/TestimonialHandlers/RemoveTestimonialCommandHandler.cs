@@ -13,7 +13,6 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.TestimonialHandler
     public class RemoveTestimonialCommandHandler : IRequestHandler<RemoveTestimonialCommand>
     {
         private readonly IRepository<Testimonial> _repository;
-
         public RemoveTestimonialCommandHandler(IRepository<Testimonial> repository)
         {
             _repository = repository;

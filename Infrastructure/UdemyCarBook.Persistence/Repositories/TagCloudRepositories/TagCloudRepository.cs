@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using UdemyCarBook.Application.Interfaces.TagCloudInterfaces;
 using UdemyCarBook.Domain.Entities;
 using UdemyCarBook.Persistence.Context;
-
 namespace UdemyCarBook.Persistence.Repositories.TagCloudRepositories
 {
     public class TagCloudRepository : ITagCloudRepository

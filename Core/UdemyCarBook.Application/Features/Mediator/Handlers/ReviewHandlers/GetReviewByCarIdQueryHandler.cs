@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UdemyCarBook.Application.Features.Mediator.Queries.ReviewQueries;
-using UdemyCarBook.Application.Features.Mediator.Results.PricingResults;
 using UdemyCarBook.Application.Features.Mediator.Results.ReviewResults;
 using UdemyCarBook.Application.Interfaces.ReviewInterfaces;
 

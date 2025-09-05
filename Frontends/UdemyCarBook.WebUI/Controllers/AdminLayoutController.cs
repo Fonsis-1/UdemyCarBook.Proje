@@ -8,7 +8,6 @@ namespace UdemyCarBook.WebUI.Controllers
         {
             return View();
         }
-
         public PartialViewResult AdminHeaderPartial()
         {
             return PartialView();
@@ -17,6 +16,7 @@ namespace UdemyCarBook.WebUI.Controllers
         {
             return PartialView();
         }
+
         public PartialViewResult AdminSidebarPartial()
         {
             return PartialView();
@@ -29,6 +29,5 @@ namespace UdemyCarBook.WebUI.Controllers
         {
             return PartialView();
         }
-
     }
 }
