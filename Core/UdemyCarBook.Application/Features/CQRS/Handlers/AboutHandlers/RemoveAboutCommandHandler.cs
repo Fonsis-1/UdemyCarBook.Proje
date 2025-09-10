@@ -19,7 +19,8 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.AboutHandlers
         public async Task Handle(RemoveAboutCommand command)
         {
             var value = await _repository.GetByIdAsync(command.Id);
-            await _repository.RemoveAsync(value);
+            value.IsDeleted = true;
+            await _repository.UpdateAsync(value);
         }
     }
 }

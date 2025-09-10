@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Domain.Entities
 {
-	public class Brand : BaseEntity
+    public class BaseEntity
     {
-		public int BrandID { get; set; }
-		public string Name { get; set; }
-		public List<Car> Cars { get; set; }
-	}
+        public bool IsDeleted { get; set; } = false;
+    }
 }

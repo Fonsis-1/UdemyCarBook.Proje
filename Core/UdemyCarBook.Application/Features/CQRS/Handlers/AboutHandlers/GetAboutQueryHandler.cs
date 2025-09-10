@@ -19,7 +19,7 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.AboutHandlers
         public async Task<List<GetAboutQueryResult>> Handle()
         {
             var values = await _repository.GetAllAsync();
-            return values.Select(x => new GetAboutQueryResult
+            return values.Where(x => !x.IsDeleted).Select(x => new GetAboutQueryResult
             {
                 AboutID = x.AboutID,
                 Description = x.Description,

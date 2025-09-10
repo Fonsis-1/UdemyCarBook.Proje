@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Domain.Entities
 {
-    public class Location
+    public class Location : BaseEntity
     {
         public int LocationID { get; set; }
         public string Name { get; set; }

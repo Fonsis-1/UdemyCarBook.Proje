@@ -21,7 +21,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.FooterAddressHandl
         public async Task<List<GetFooterAddressQueryResult>> Handle(GetFooterAddressQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetAllAsync();
-            return values.Select(x => new GetFooterAddressQueryResult
+            return values.Where(x => !x.IsDeleted).Select(x => new GetFooterAddressQueryResult
             {
                 Address = x.Address,
                 Description = x.Description,

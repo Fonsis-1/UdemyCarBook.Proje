@@ -20,7 +20,8 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.TestimonialHandler
         public async Task Handle(RemoveTestimonialCommand request, CancellationToken cancellationToken)
         {
             var value = await _repository.GetByIdAsync(request.Id);
-            await _repository.RemoveAsync(value);
+            value.IsDeleted = true;
+            await _repository.UpdateAsync(value);
         }
     }
 }

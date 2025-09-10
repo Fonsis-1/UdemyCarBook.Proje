@@ -21,7 +21,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.ServiceHandlers
         public async Task<List<GetServiceQueryResult>> Handle(GetServiceQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetAllAsync();
-            return values.Select(x => new GetServiceQueryResult
+            return values.Where(x => !x.IsDeleted).Select(x => new GetServiceQueryResult
             {
                 Description = x.Description,
                 IconUrl = x.IconUrl,

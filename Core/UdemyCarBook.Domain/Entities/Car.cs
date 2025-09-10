@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Domain.Entities
 {
-    public class Car
+    public class Car:BaseEntity
     {
         public int CarID { get; set; }
         public int BrandID { get; set; }

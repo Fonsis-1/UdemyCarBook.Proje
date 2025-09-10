@@ -18,10 +18,12 @@ namespace UdemyCarBook.Application.Features.CQRS.Handlers.CarHandlers
         {
             _repository = repository;
         }
+
         public List<GetCarWithBrandQueryResult> Handle()
         {
             var values = _repository.GetCarsListWithBrands();
-            return values.Select(x => new GetCarWithBrandQueryResult
+
+            return values.Where(x => !x.IsDeleted).Select(x => new GetCarWithBrandQueryResult
             {
                 BrandName = x.Brand.Name,
                 BrandID = x.BrandID,

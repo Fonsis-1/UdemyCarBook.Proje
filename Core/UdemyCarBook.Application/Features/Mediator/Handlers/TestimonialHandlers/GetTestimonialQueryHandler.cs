@@ -21,7 +21,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.TestimonialHandler
         public async Task<List<GetTestimonialQueryResult>> Handle(GetTestimonialQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetAllAsync();
-            return values.Select(x => new GetTestimonialQueryResult
+            return values.Where(x => !x.IsDeleted).Select(x => new GetTestimonialQueryResult
             {
                 Name = x.Name,
                 TestimonialID = x.TestimonialID,

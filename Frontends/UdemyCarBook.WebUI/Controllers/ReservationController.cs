@@ -27,14 +27,14 @@ namespace UdemyCarBook.WebUI.Controllers
             var responseMessage = await client.GetAsync("https://localhost:7173/api/Locations");
 
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            var values = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData);
-            List<SelectListItem> values2 = (from x in values
-                                            select new SelectListItem
-                                            {
+            var values = JsonConvert.DeserializeObject<List<ResultLocationDto>>(jsonData) ?? new List<ResultLocationDto>();
+            ViewBag.v=values.Select(x => new SelectListItem
+            {
                                                 Text = x.Name,
                                                 Value = x.LocationID.ToString()
+                                                
                                             }).ToList();
-            ViewBag.v = values2;
+            //ViewBag.v = values2;
 
             return View();
         }

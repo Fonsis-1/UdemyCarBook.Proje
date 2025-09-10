@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Domain.Entities
 {
-	public class About
-	{
+	public class About : BaseEntity
+    {
         public int AboutID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }

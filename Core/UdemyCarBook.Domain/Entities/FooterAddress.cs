@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UdemyCarBook.Domain.Entities
 {
-    public class FooterAddress
+    public class FooterAddress : BaseEntity
     {
         public int FooterAddressID { get; set; }
         public string Description { get; set; }

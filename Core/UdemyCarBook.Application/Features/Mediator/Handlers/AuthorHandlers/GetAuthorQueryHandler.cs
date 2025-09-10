@@ -21,7 +21,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.AuthorHandlers
         public async Task<List<GetAuthorQueryResult>> Handle(GetAuthorQuery request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetAllAsync();
-            return values.Select(x => new GetAuthorQueryResult
+            return values.Where(x => !x.IsDeleted).Select(x => new GetAuthorQueryResult
             {
                 Name = x.Name,
                 AuthorID = x.AuthorID,
